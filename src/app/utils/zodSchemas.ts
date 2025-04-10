@@ -12,7 +12,7 @@ export const personalInfo = z.object({
     zip: z.string().min(5, "Zip must be at least 5 digits").regex(/^\d+$/, "Zip must be numeric"),
   });
 
-  export const AccountSetUp = z
+  export const AccountInfo = z
   .object({
     username: z.string().min(4, "Min 4 characters"),
     password: z.string().min(6, "Min 6 characters"),
@@ -22,3 +22,6 @@ export const personalInfo = z.object({
     message: "Passwords must match",
     path: ["confirmPassword"],
   });
+
+
+  

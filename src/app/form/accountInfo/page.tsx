@@ -29,9 +29,9 @@ export default function AccountSetupStep({
   const password = watch('password');
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-100 to-white px-4">
+    <div className="min-h-screen flex items-center justify-center  px-4">
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
-        <h2 className="text-2xl font-bold text-emerald-600 mb-6 text-center">
+        <h2 className="text-2xl font-bold text-sky-600 mb-6 text-center">
           Step 3: Account Setup
         </h2>
 
@@ -41,7 +41,7 @@ export default function AccountSetupStep({
             <label className="block text-gray-700 font-medium mb-1">Username</label>
             <input
               {...register('username')}
-              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400"
               placeholder="Username"
             />
             {errors.username && (
@@ -55,7 +55,7 @@ export default function AccountSetupStep({
             <input
               {...register('password')}
               type="password"
-              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400"
               placeholder="Enter Password"
             />
             {errors.password && (
@@ -69,7 +69,7 @@ export default function AccountSetupStep({
             <input
               {...register('confirmPassword')}
               type="password"
-              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400"
               placeholder="Re-type Password"
             />
             {errors.confirmPassword && (
@@ -77,17 +77,11 @@ export default function AccountSetupStep({
             )}
           </div>
 
-          <div className="flex justify-between items-center pt-4">
-            <button
-              type="button"
-              onClick={onBack}
-              className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition"
-            >
-              Previous
-            </button>
+          <div className="flex justify-center items-center pt-4">
+            
             <button
               type="submit"
-              className="px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition"
+              className="px-4 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition w-full"
             >
               Submit
             </button>

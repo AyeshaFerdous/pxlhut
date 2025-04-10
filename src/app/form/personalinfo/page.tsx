@@ -13,20 +13,24 @@ export default function PersonalInfo({ onNext, defaultValues }: { onNext: (data:
     defaultValues
   });
 
+  const onSubmit = (data: FormData) => {
+    console.log("Form submitted with data:", data); 
+    onNext(data); 
+  };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-100 to-white px-4">
+    <div className="min-h-screen flex items-center justify-center   px-4">
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
-        <h2 className="text-2xl font-bold text-emerald-600 mb-6 text-center">
+        <h2 className="text-2xl font-bold text-sky-600 mb-6 text-center">
           Step 1: Personal Info
         </h2>
 
-        <form onSubmit={handleSubmit(onNext)} className="space-y-5">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           {/* Full Name */}
           <div>
             <label className="block text-gray-700 font-medium mb-1">Full Name</label>
             <input
               {...register("fullName")}
-              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400"
               placeholder="Enter Your Name"
             />
             {errors.fullName && (
@@ -40,7 +44,7 @@ export default function PersonalInfo({ onNext, defaultValues }: { onNext: (data:
             <input
               {...register("email")}
               type="email"
-              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400"
               placeholder="you@example.com"
             />
             {errors.email && (
@@ -54,7 +58,7 @@ export default function PersonalInfo({ onNext, defaultValues }: { onNext: (data:
             <input
               {...register("phone")}
               type="tel"
-              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400"
               placeholder="Atleast 10 digits"
             />
             {errors.phone && (
@@ -65,7 +69,7 @@ export default function PersonalInfo({ onNext, defaultValues }: { onNext: (data:
           {/* Next Button */}
           <button
             type="submit"
-            className="w-full bg-emerald-500 text-white py-2 rounded-lg font-medium hover:bg-emerald-600 transition duration-200"
+            className="w-full bg-sky-500 text-white py-2 rounded-lg font-medium hover:bg-sky-600 transition duration-200"
           >
             Next
           </button>

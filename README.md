@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pxlhut Multi-Step Form with Validation
 
-## Getting Started
+This is a multi-step form created with **React**, **Next.js**, **Zod**, **React Hook Form**, and **TailwindCSS**. It features validation for each step of the form, a "Next" and "Previous" button to navigate through the steps, and a summary of all entered data before submission.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## **Features**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Multi-step form with **3 steps**:
+  - **Step 1**: Personal Information
+  - **Step 2**: Address Details
+  - **Step 3**: Account Setup
+- **Validation** using **Zod** for each input field.
+- **React Hook Form** for form handling and state management.
+- **TailwindCSS** for styling, including responsiveness.
+- Ability to go **back and forth** between form steps using "Previous" and "Next" buttons.
+- In the final step, a **summary** of the entered data is displayed before submission.
+- The form data is stored in the local state using **useState** and **console logs** the submitted data.
+  
+## **Tech Stack**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js** (App Router)
+- **React Hook Form** for form handling
+- **Zod** for schema validation
+- **TailwindCSS** for styling
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## **How to Run the Project**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository to your local machine:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    git clone https://github.com/AyeshaFerdous/pxlhut
+    ```
 
-## Deploy on Vercel
+2. Navigate to the project directory:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    cd pxlhut
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Install the dependencies:
+
+    ```bash
+    pnpm install
+    ```
+
+4. Run the development server:
+
+    ```bash
+    pnpm dev
+    ```
+
+5. Open your browser and go to:
+
+    ```
+    http://localhost:3000
+    ```
+
+---
+
+
+
+## **Form Steps & Validation**
+
+### **Step 1: Personal Info**
+- Full Name: Required.
+- Email: Required, must be a valid email format.
+- Phone Number: Required, must be at least 10 digits.
+
+### **Step 2: Address Info**
+- Street Address: Required.
+- City: Required.
+- Zip Code: Required, must only be numbers and at least 5 digits long.
+
+### **Step 3: Account Setup**
+- Username: Required, minimum 4 characters.
+- Password: Required, minimum 6 characters.
+- Confirm Password: Must match the password.
+
+---
+
+## **Bonus Features**
+
+
+- **Responsiveness**: TailwindCSS is used to ensure the form is fully responsive across mobile, tablet, and desktop devices.
+
+
